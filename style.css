@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap");
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Manrope, sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(
+    to right,
+    var(--dark-blue),
+    var(--dark-grayish-blue)
+  );
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: var(--darkGrayishBlue);
+  width: 90%;
+  max-width: 50rem;
+  color: #fff;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.9);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.advice-id {
+  color: var(--neon-green);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  letter-spacing: 3px;
+}
+
+.advice-text {
+  font-size: 2rem;
+  color: var(--light-cyan);
+  padding-inline: 2.5rem;
+  text-align: center;
+}
+
+.pattern {
+  display: none;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.desktop {
+  display: block;
+  /* padding: 2rem;
+  margin-bottom: 1rem; */
+}
+
+.btn-container {
+  position: relative;
+  padding-block: 1rem;
+}
+
+.btn {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%) translateY(-20%);
+  /* display: grid; */
+  /* place-content: center; */
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background: var(--neon-green);
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 0 2.6rem 0.6rem hsla(150, 100%, 66%, 65%);
+}
+
+/* @media screen and (max-width: 375px) {
+  .divider.mobile {
+    display: block;
+  }
+  .divider.desktop {
+    display: none;
+  }
+} */
+
+@media only screen and (max-width: 37.5em) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  margin-bottom: 2rem;
+}
+.attribution a:link {
+  color: var(--neon-green);
+}
